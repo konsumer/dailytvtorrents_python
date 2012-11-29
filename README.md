@@ -1,10 +1,13 @@
 # Daily TV Torrents Python Library
 
-Python library for getting TV/torrent info from dailytvtorrents.org.
+Python library for getting TV/torrent info from dailytvtorrents.org [API](http://api.dailytvtorrents.org/).
 
 ## Usage
-
-print d.episode_getLatest(show_name="futurama")
+    import dailytvtorrents
+    
+    d = dailytvtorrents.DailyTvTorrents()
+    
+    print d.episode_getLatest(show_name="futurama")
 
     print d.misc_getCleanFileName(filename="futurama.6x15.some.title.avi")
     print d.misc_getCleanFileName(filename="The_Colbert_Report_2011_06_06.avi")
@@ -16,10 +19,6 @@ print d.episode_getLatest(show_name="futurama")
     print d.show_getEpisodes(show_name="futurama")
 
     print d.show_getInfo(show_name="futurama")
-
-    #print d.shows_getNew()
-    #print d.shows_getNew(strict="yes")
-    #print d.shows_getNew(strict="yes", max_age_hours=168)
 
     print d.shows_getPopular()
     print d.shows_getPopular(max_items=3)
@@ -40,3 +39,9 @@ print d.episode_getLatest(show_name="futurama")
     print d.torrent_getInfosAll(show_name="futurama", episode_num="S06E23")
 
     print d.torrent_getLatest(show_name="futurama", quality=720)
+    
+    # these ones didn't work in my testing
+    
+    #print d.shows_getNew()
+    #print d.shows_getNew(strict="yes")
+    #print d.shows_getNew(strict="yes", max_age_hours=168)
